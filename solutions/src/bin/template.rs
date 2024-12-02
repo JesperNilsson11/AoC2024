@@ -1,13 +1,13 @@
 
 fn part1() -> i64 {
-    let input = include_str!("inputX.txt");
+    let input = include_str!("inputX.txt").trim();
     let mut result = 0;
     
     return result;
 }
 
 fn part2() -> i64 {
-    let input = include_str!("inputX.txt");
+    let input = include_str!("inputX.txt").trim();
     let mut result = 0;
     
 
