@@ -1,4 +1,3 @@
-
 fn part1() -> i64 {
     let input = include_str!("input3.txt").trim();
     let mut result = 0;
@@ -8,16 +7,10 @@ fn part1() -> i64 {
     let mut state = 0;
 
     for c in input.chars() {
-        if state == 0 {
+        if c == 'm' {
+            state = 1;
             left = 0;
             right = 0;
-        }
-        if c == 'm' {
-            if state == 0 {
-                state = 1;
-            } else {
-                state = 0;
-            }
         } else if c == 'u' {
             if state == 1 {
                 state = 2;
@@ -55,14 +48,13 @@ fn part1() -> i64 {
         } else if c == ')' {
             if state >= 9 && state <= 11 {
                 result += left * right;
-
             }
             state = 0;
         } else {
             state = 0;
         }
     }
-    
+
     return result;
 }
 
@@ -76,16 +68,10 @@ fn part2() -> i64 {
     let mut enabled = true;
 
     for c in input.chars() {
-        if state == 0 {
+        if c == 'm' {
+            state = 1;
             left = 0;
             right = 0;
-        }
-        if c == 'm' {
-            if state == 0 {
-                state = 1;
-            } else {
-                state = 0;
-            }
         } else if c == 'u' {
             if state == 1 {
                 state = 2;
@@ -136,11 +122,7 @@ fn part2() -> i64 {
             }
             state = 0;
         } else if c == 'd' {
-            if state == 0 {
-                state = 12;
-            } else {
-                state = 0;
-            }
+            state = 12;
         } else if c == 'o' {
             if state == 12 {
                 state = 13;
@@ -169,7 +151,7 @@ fn part2() -> i64 {
             state = 0;
         }
     }
-    
+
     return result;
 }
 
