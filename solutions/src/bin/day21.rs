@@ -45,7 +45,7 @@ fn calc2(code: Vec<char>, level: i64, memo: &mut HashMap<(Vec<char>, i64), i64>)
             newpresses1.push('A');
         }
 
-        if newpos.0 != 0 || dx >= 0{
+        if newpos.0 != 0 || dx >= 0 {
             for _ in 0..dx.abs() {
                 if dx > 0 {
                     newpresses2.push('>');
